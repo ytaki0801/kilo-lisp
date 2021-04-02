@@ -13,7 +13,7 @@
 
 #define SSTR_MAX 1024
 
-typedef unsigned int value_t;
+typedef uintptr_t value_t;
 enum NODE_TAG { NODE_STRG, NODE_CONS };
 
 typedef struct _node_t_ {
