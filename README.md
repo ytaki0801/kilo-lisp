@@ -31,7 +31,7 @@ Now the following LISP interpreters are supposed as a `name-of-interpreter`, alt
 	* Only supported for number to eval and no eval error handling.
 
 * **`chibi`**: [Chibi-Scheme](http://synthcode.com/wiki/chibi-scheme) >= 0.9.1
-	* Only supported for numver to eval.
+	* Only supported for number to eval.
 
 * **`ecl`**: [Embeddable Common Lisp](https://common-lisp.net/project/ecl/) >= 16.1.3
 	* No eval error handling.
