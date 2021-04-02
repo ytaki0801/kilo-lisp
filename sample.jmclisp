@@ -1,0 +1,20 @@
+(car (cdr '(10 20 30)))
+
+((lambda (x) (car (cdr x))) '(abc def ghi))
+
+((lambda (func x y) (func x (func y '())))
+ 'cons '10 '20)
+
+((lambda (func x y) (func x (func y '())))
+ '(lambda (x y) (cons x (cons y '())))
+ '10 '20)
+
+((lambda (assoc k v) (assoc k v))
+ '(lambda (k v)
+    (cond ((eq v '()) nil)
+          ((eq (car (car v)) k)
+           (car v))
+          ('t (assoc k (cdr v)))))
+ 'Orange
+ '((Apple . 120) (Orange . 210) (Lemmon . 180)))
+
