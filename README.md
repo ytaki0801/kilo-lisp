@@ -1,13 +1,15 @@
 # Kilo embedding LISP interpreter
 
 These are sample codes for embedding various LISP interpreters to [Kilo](https://github.com/antirez/kilo), with operations of last S-expression evaluating and parentheses matching.
-The source code to compile Kilo is supposed to be from a tutorial site, [Build Your Own Text Editor](https://viewsourcecode.org/snaptoken/kilo/) Step 130, which is copied as "kilo-BYOTE130.c" in this repository.
+The source code to compile Kilo is supposed to be from a tutorial site, [Build Your Own Text Editor](https://viewsourcecode.org/snaptoken/kilo/) Step 130, which is copied as `kilo-BYOTE130.c` in this repository.
+
+![demo](https://github.com/ytaki0801/kilo-lisp/blob/master/kilo-lisp_demo.gif)
 
 ## How to Compile and Use
 
 Before compiling, you must install libraries of each LISP interpreter, except for no interpreter or JMC Lisp. For example, `sudo apt install gauche-dev` is needed to use Gauche on Debian package management system.
 
-After install of the LISP interpreter libraries, just type the following in this repository to compile and use. [CTRL-S is to save and CTRL-Q is to quit](https://github.com/antirez/kilo).
+After install of the LISP interpreter libraries, just type the following in this repository to compile and use. Parentheses matching is done automatically, C-e is to eval-last-sexp, [C-s is to save and C-q is to quit](https://github.com/antirez/kilo).
 
 ```
 $ make <name-of-interpreter or blank>
