@@ -4,7 +4,9 @@ noengine: $(NAME).c
 	cc -o $(NAME) $(NAME).c
 
 jmclisp: $(NAME.c) jmclisp.c
-	cc -DJMCLISP -o $(NAME) $(NAME).c jmclisp.c
+#	cc -DJMCLISP -o $(NAME) $(NAME).c jmclisp.c
+	cc -g -c jmclisp.c
+	cc -DJMCLISP -o $(NAME) $(NAME).c jmclisp.o
 
 gauche: $(NAME).c
 	cc -DGAUCHE -Wall `gauche-config -I` -o $(NAME) $(NAME).c `gauche-config -l`
