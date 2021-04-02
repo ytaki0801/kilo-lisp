@@ -5,9 +5,9 @@ The source code to compile Kilo is supposed to be from a tutorial site, [Build Y
 
 ## How to Compile and Use
 
-Before compiling, you must install libraries of each LISP interpreter, except for no interpreter or JMC Lisp. For example, `sudo apt install gauche-dev` is needed to use Gauche on an Ubuntu system.
+Before compiling, you must install libraries of each LISP interpreter, except for no interpreter or JMC Lisp. For example, `sudo apt install gauche-dev` is needed to use Gauche on Debian package management system.
 
-After install of the LISP interpreter libraries, just type in this repository like the following:
+After install of the LISP interpreter libraries, just type the following in this repository to compile and use. [CTRL-S is to save and CTRL-Q is to quit](https://github.com/antirez/kilo).
 
 ```
 $ make <name-of-interpreter or blank>
@@ -16,22 +16,22 @@ $ ./kilo-lisp <filename>
 
 Now the following LISP interpreters are supposed as a `name-of-interpreter`, although most ones did not support many data types of a return value and/or eval error handling.
 
-* **<blank>**: No interpreter
+* `blank`: No interpreter
 	* Just for parentheses matching and echo of last S-expression.
 
-* **jmclisp**: JMC Lisp
+* **`jmclisp`**: JMC Lisp
 	* Implemented in C by [ytaki0801](https://github.com/ytaki0801) for McCarthy's 1960 paper definitions, derived from [Paul Graham's Common Lisp implementation](http://www.paulgraham.com/lispcode.html). See `sample.jmclisp` for sample codes.
 
-* **gauche**: [Gauche - A Scheme Implementation](http://practical-scheme.net/gauche/) >= 0.9.6
+* **`gauche`**: [Gauche - A Scheme Implementation](http://practical-scheme.net/gauche/) >= 0.9.6
 	* Mostly supported except some data types to eval, vector expression for example.
 
-* **guile**: [GNU Guile](https://www.gnu.org/software/guile/) >= 3.0.4
+* **`guile`**: [GNU Guile](https://www.gnu.org/software/guile/) >= 3.0.4
 	* Only supported for number to eval and no eval error handling.
 
-* **chibi**: [Chibi-Scheme](http://synthcode.com/wiki/chibi-scheme) >= 0.9.1
+* **`chibi`**: [Chibi-Scheme](http://synthcode.com/wiki/chibi-scheme) >= 0.9.1
 	* Only supported for numver to eval.
 
-* **ecl**: [Embeddable Common Lisp](https://common-lisp.net/project/ecl/) >= 16.1.3
+* **`ecl\**: [Embeddable Common Lisp](https://common-lisp.net/project/ecl/) >= 16.1.3
 	* No eval error handling.
 
 # License
