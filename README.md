@@ -7,7 +7,7 @@ The source code to compile Kilo is supposed to be from a tutorial site, [Build Y
 
 ## How to Compile and Use
 
-Before compiling, you must install libraries of each LISP interpreter, except for no interpreter or JMC Lisp. For example, `sudo apt install gauche-dev` is needed to use Gauche on Debian package management system.
+Before compiling, you must install libraries of each LISP interpreter, except for no interpreter or `jmc`. For example, `sudo apt install gauche-dev` is needed to use Gauche on Debian package management system.
 
 After install of the LISP interpreter libraries, just type the following in this repository to compile and use. Parentheses matching is done automatically, C-e is to eval-last-sexp, [C-s is to save and C-q is to quit](https://github.com/antirez/kilo).
 
@@ -22,7 +22,7 @@ Now the following LISP interpreters are supposed as a `name-of-interpreter`, alt
 	* Just for parentheses matching and echo of last S-expression.
 
 * **`jmc`**: McCarthy's Original Lisp
-	* Implemented in C by [ytaki0801](https://github.com/ytaki0801) for McCarthy's 1960 paper definitions, derived from [Paul Graham's Common Lisp implementation](http://www.paulgraham.com/lispcode.html), without eval error handling. See `sample.jmclisp` for sample codes.
+	* Implemented in C by [ytaki0801](https://github.com/ytaki0801) for McCarthy's 1960 paper definitions, derived from [Paul Graham's Common Lisp implementation](http://www.paulgraham.com/lispcode.html), without eval error handling. See `sample.jmc` for sample codes.
 
 * **`gauche`**: [Gauche - A Scheme Implementation](http://practical-scheme.net/gauche/) >= 0.9.6
 	* Mostly supported except some data types to eval, vector expression for example.

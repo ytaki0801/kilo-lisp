@@ -17,7 +17,7 @@
 #include <time.h>
 #include <unistd.h>
 
-#ifdef JMCLISP
+#ifdef JMC
 extern char s_eval_retval[];
 void s_eval_string(char *s);
 #elif GAUCHE
@@ -708,7 +708,7 @@ void evalLastSExp() {
     se_buf = se_bufq; free(tmp);
   }
 
-#ifdef JMCLISP
+#ifdef JMC
   s_eval_string(se_buf);
   editorSetStatusMessage("JMC Lisp: %s", s_eval_retval);
 #elif GAUCHE

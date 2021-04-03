@@ -247,7 +247,7 @@ void s_eval_string(char *s)
   s_output(r);
 }
 
-#ifndef JMCLISP
+#ifndef JMC
 int main(void)
 {
   s_eval_string(
