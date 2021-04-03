@@ -23,7 +23,7 @@ Now the following LISP interpreters are supposed as a `name-of-interpreter`, alt
 
 * **`jmc`**: McCarthy's Original Lisp
 	* Implemented in C by [ytaki0801](https://github.com/ytaki0801) for McCarthy's 1960 paper definitions, derived from [Paul Graham's Common Lisp implementation](http://www.paulgraham.com/lispcode.html), without eval error handling. See `sample.jmc` for sample codes.
-	* Docker image in the demo movie: `docker run --rm -it ytaki0801/kilo-jmclisp`
+	* Docker image: `docker run --rm -it ytaki0801/kilo-jmclisp`
 
 * **`gauche`**: [Gauche - A Scheme Implementation](http://practical-scheme.net/gauche/) >= 0.9.6
 	* Mostly supported except some data types to eval, vector expression for example.
