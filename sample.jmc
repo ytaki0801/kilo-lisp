@@ -9,12 +9,12 @@
  '(lambda (x y) (cons x (cons y '())))
  '10 '20)
 
-((lambda (assoc k v) (cdr (assoc k v)))
+((lambda (assoc f k v) (f (assoc k v)))
  '(lambda (k v)
     (cond ((eq v '()) nil)
-          ((eq (car (car v)) k)
-           (car v))
-          ('t (assoc k (cdr v)))))
+          ((eq (car (car v)) k) (car v))
+          (t (assoc k (cdr v)))))
+ '(lambda (x) (cond ((eq x '()) nil) (t (cdr x))))
  'Orange
  '((Apple . 120) (Orange . 210) (Lemmon . 180)))
 

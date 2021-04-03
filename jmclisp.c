@@ -224,7 +224,7 @@ void s_strcons(node_t s)
 
 void s_output(node_t s)
 {
-  if (s == NULL) {
+  if (s == S_NIL) {
     strcat(s_eval_retval, "()");
   } else if (n_strg(s)) {
     strcat(s_eval_retval, node_to_str(s));
@@ -242,7 +242,7 @@ void s_eval_string(char *s)
 
   s_len = s_lex(s, lr_s) - 1;
   node_t rs = s_syn(lr_s, &s_len);
-  node_t r = s_eval(rs, NULL);
+  node_t r = s_eval(rs, S_NIL);
   s_eval_retval[0] = '\0';
   s_output(r);
 }
