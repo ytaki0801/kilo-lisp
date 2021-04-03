@@ -10,10 +10,11 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include <stdint.h>
 
-#define SSTR_MAX 1024
+#define SSTR_MAX 4096
 
-typedef unsigned int value_t;
+typedef uintptr_t value_t;
 enum NODE_TAG { NODE_STRG, NODE_CONS };
 
 typedef struct _node_t_ {
@@ -183,12 +184,18 @@ node_t s_eval(node_t e, node_t a)
     else if (eq(car(e), str_to_node("cons")))  return cons(s_eval(cadr(e), a),
                                                            s_eval(caddr(e), a));
     else if (eq(car(e), str_to_node("cond")))  return evcon(cdr(e), a);
-    else return s_eval(cons(s_assoc(car(e), a), cdr(e)), a);
+    else {
+      node_t r;
+      if ((r = s_assoc(car(e), a)) == NULL)
+        return S_NIL;
+      else
+        return s_eval(cons(r, cdr(e)), a);
+    }
   } else if (eq(caar(e), str_to_node("lambda"))) {
     return s_eval(caddar(e),
                   s_append(s_pair(cadar(e), evlis(cdr(e), a)), a));
   } else {
-    return NULL;
+    return S_NIL;
   }
 }
 

@@ -3,7 +3,7 @@
 These are sample codes for embedding various LISP interpreters to [Kilo](https://github.com/antirez/kilo), with operations of last S-expression evaluating and parentheses matching.
 The source code to compile Kilo is supposed to be from a tutorial site, [Build Your Own Text Editor](https://viewsourcecode.org/snaptoken/kilo/) Step 130, which is copied as `kilo-BYOTE130.c` in this repository.
 
-![demo](https://github.com/ytaki0801/kilo-lisp/blob/master/kilo-lisp_demo.gif)
+![demo](https://github.com/ytaki0801/kilo-lisp/blob/master/kilo-lisp.gif)
 
 ## How to Compile and Use
 
