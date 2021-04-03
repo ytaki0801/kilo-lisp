@@ -3,8 +3,6 @@
 These are sample codes for embedding various LISP interpreters to [Kilo](https://github.com/antirez/kilo), with operations of last S-expression evaluating and parentheses matching.
 The source code to compile Kilo is supposed to be from a tutorial site, [Build Your Own Text Editor](https://viewsourcecode.org/snaptoken/kilo/) Step 130, which is copied as `kilo-BYOTE130.c` in this repository.
 
-![demo](https://github.com/ytaki0801/kilo-lisp/blob/master/kilo-lisp.gif)
-
 ## How to Compile and Use
 
 Before compiling, you must install libraries of each LISP interpreter, except for no interpreter or `jmc`. For example, `sudo apt install gauche-dev` is needed to use Gauche on Debian package management system.
@@ -15,6 +13,8 @@ After install of the LISP interpreter libraries, just type the following in this
 $ make <name-of-interpreter or blank>
 $ ./kilo-lisp <filename>
 ```
+
+![demo](https://github.com/ytaki0801/kilo-lisp/blob/master/kilo-lisp.gif)
 
 Now the following LISP interpreters are supposed as a `name-of-interpreter`, although most ones did not support many data types of a return value and/or eval error handling.
 
@@ -29,10 +29,10 @@ Now the following LISP interpreters are supposed as a `name-of-interpreter`, alt
 	* Mostly supported except some data types to eval, vector expression for example.
 
 * **`guile`**: [GNU Guile](https://www.gnu.org/software/guile/) >= 3.0.4
-	* Only supported for number to eval and no eval error handling.
+	* Only supported for numbers as a return value and no eval error handling.
 
 * **`chibi`**: [Chibi-Scheme](http://synthcode.com/wiki/chibi-scheme) >= 0.9.1
-	* Only supported for number to eval.
+	* Only supported for numbers as a return value.
 
 * **`ecl`**: [Embeddable Common Lisp](https://common-lisp.net/project/ecl/) >= 16.1.3
 	* No eval error handling.
