@@ -184,13 +184,7 @@ node_t s_eval(node_t e, node_t a)
     else if (eq(car(e), str_to_node("cons")))  return cons(s_eval(cadr(e), a),
                                                            s_eval(caddr(e), a));
     else if (eq(car(e), str_to_node("cond")))  return evcon(cdr(e), a);
-    else {
-      node_t r;
-      if ((r = s_assoc(car(e), a)) == NULL)
-        return S_NIL;
-      else
-        return s_eval(cons(r, cdr(e)), a);
-    }
+    else return s_eval(cons(s_assoc(car(e), a), cdr(e)), a);
   } else if (eq(caar(e), str_to_node("lambda"))) {
     return s_eval(caddar(e),
                   s_append(s_pair(cadar(e), evlis(cdr(e), a)), a));
@@ -253,7 +247,7 @@ void s_eval_string(char *s)
   s_output(r);
 }
 
-/*
+#ifndef JMCLISP
 int main(void)
 {
   s_eval_string(
@@ -280,12 +274,12 @@ int main(void)
   printf("%s\n", s_eval_retval);
 
   s_eval_string(
-    "((lambda (assoc k v) (assoc k v))  \
-     '(lambda (k v)                     \
-        (cond ((eq v '()) nil)          \
-              ((eq (car (car v)) k)     \
-               (car v))                 \
-              ('t (assoc k (cdr v)))))  \
+    "((lambda (assoc k v) (cdr (assoc k v)))  \
+     '(lambda (k v)                           \
+        (cond ((eq v '()) nil)                \
+              ((eq (car (car v)) k)           \
+               (car v))                       \
+              ('t (assoc k (cdr v)))))        \
      'Orange \
      '((Apple . 120) (Orange . 210) (Lemmon . 180)))"
   );
@@ -293,4 +287,5 @@ int main(void)
 
   return (0);
 }
-*/
+#endif
+

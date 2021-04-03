@@ -21,8 +21,8 @@ Now the following LISP interpreters are supposed as a `name-of-interpreter`, alt
 * `blank`: No interpreter
 	* Just for parentheses matching and echo of last S-expression.
 
-* **`jmclisp`**: JMC Lisp
-	* Implemented in C by [ytaki0801](https://github.com/ytaki0801) for McCarthy's 1960 paper definitions, derived from [Paul Graham's Common Lisp implementation](http://www.paulgraham.com/lispcode.html). See `sample.jmclisp` for sample codes.
+* **`jmc`**: McCarthy's Original Lisp
+	* Implemented in C by [ytaki0801](https://github.com/ytaki0801) for McCarthy's 1960 paper definitions, derived from [Paul Graham's Common Lisp implementation](http://www.paulgraham.com/lispcode.html), without eval error handling. See `sample.jmclisp` for sample codes.
 
 * **`gauche`**: [Gauche - A Scheme Implementation](http://practical-scheme.net/gauche/) >= 0.9.6
 	* Mostly supported except some data types to eval, vector expression for example.

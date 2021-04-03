@@ -9,7 +9,7 @@
  '(lambda (x y) (cons x (cons y '())))
  '10 '20)
 
-((lambda (assoc k v) (assoc k v))
+((lambda (assoc k v) (cdr (assoc k v)))
  '(lambda (k v)
     (cond ((eq v '()) nil)
           ((eq (car (car v)) k)

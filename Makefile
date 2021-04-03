@@ -3,8 +3,11 @@ NAME = kilo-lisp
 noengine: $(NAME).c
 	cc -o $(NAME) $(NAME).c
 
-jmclisp: $(NAME.c) jmclisp.c
+jmc: $(NAME.c) jmclisp.c
 	cc -DJMCLISP -o $(NAME) $(NAME).c jmclisp.c
+
+jmclisp: jmclisp.c
+	cc -o $@ jmclisp.c
 
 gauche: $(NAME).c
 	cc -DGAUCHE -Wall `gauche-config -I` -o $(NAME) $(NAME).c `gauche-config -l`
@@ -19,5 +22,5 @@ ecl: $(NAME).c
 	cc -DECL `ecl-config --cflags` -o $(NAME) $(NAME).c `ecl-config --ldflags` -lecl
 
 clean:
-	rm -f $(NAME)
+	rm -f $(NAME) jmclisp
 
