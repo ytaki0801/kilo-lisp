@@ -875,7 +875,7 @@ int main(int argc, char *argv[]) {
     editorOpen(argv[1]);
   }
 
-  editorSetStatusMessage("HELP: Ctrl-S = save | Ctrl-Q = quit");
+  editorSetStatusMessage("HELP: C-e = eval | C-s = save | C-q = quit");
 
 #ifdef GAUCHE
   GC_INIT();

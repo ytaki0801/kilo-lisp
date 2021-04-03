@@ -4,7 +4,7 @@ noengine: $(NAME).c
 	cc -o $(NAME) $(NAME).c
 
 jmc: $(NAME.c) jmclisp.c
-	cc -static -DJMC -o $(NAME) $(NAME).c jmclisp.c
+	cc -DJMC -o $(NAME) $(NAME).c jmclisp.c
 
 jmclisp: jmclisp.c
 	cc -o $@ jmclisp.c
