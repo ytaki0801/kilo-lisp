@@ -37,7 +37,7 @@ Now the following LISP interpreters are supposed as a `name-of-interpreter`, alt
 * **`ecl`**: [Embeddable Common Lisp](https://common-lisp.net/project/ecl/) >= 16.1.3
 	* No eval error handling.
 
-# License
+## License
 
 * Kilo: [BSD 2-Clause "Simplified" License](https://github.com/snaptoken/kilo-src/blob/master/LICENSE)
 
