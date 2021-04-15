@@ -281,7 +281,7 @@ int main(void)
                (car v))                       \
               ('t (assoc k (cdr v)))))        \
      'Orange \
-     '((Apple . 120) (Orange . 210) (Lemmon . 180)))"
+     '((Apple . 120) (Orange . 210) (Lemon . 180)))"
   );
   printf("%s\n", s_eval_retval);
 

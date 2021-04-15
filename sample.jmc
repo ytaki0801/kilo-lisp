@@ -16,5 +16,5 @@
           (t (assoc k (cdr v)))))
  '(lambda (x) (cond ((eq x '()) nil) (t (cdr x))))
  'Orange
- '((Apple . 120) (Orange . 210) (Lemmon . 180)))
+ '((Apple . 120) (Orange . 210) (Lemon . 180)))
 
